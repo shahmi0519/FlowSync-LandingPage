@@ -1,0 +1,77 @@
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #ffffff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #00d084;
+  --accent-bg: rgba(0, 208, 132, 0.1);
+  --accent-border: rgba(0, 208, 132, 0.4);
+  --social-bg: rgba(244, 243, 236, 0.5);
+
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --heading: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  font-family: var(--sans);
+  font-size: 16px; /* Optimized core typography fallback */
+  line-height: 1.5;
+  letter-spacing: 0.18px;
+
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: light dark;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #0b0f19;
+    --border: #1f2937;
+    --code-bg: #111827;
+    --social-bg: rgba(31, 41, 55, 0.4);
+  }
+}
+
+/* GLOBAL STRUCTURAL RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Prevents unwanted deployment layout micro-scrolling layout breaks */
+  background: var(--bg);
+  color: var(--text);
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ACCESSIBILITY & UTILITY BREAKPOINTS */
+@media (max-width: 640px) {
+  p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+}
